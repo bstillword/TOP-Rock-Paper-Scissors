@@ -1,46 +1,46 @@
 // JavaScript source code
-game();
-function game() {
-    playerWin = 0;
-    computerWin = 0;
+function playGame(e) {
+    player = document.getElementById('playerScore');
+    comp = document.getElementById('compScore');
+    banner = document.getElementById('winBanner');
+    playerWin = parseInt(player.innerText);
+    computerWin = parseInt(comp.innerText);
 
-    while (playerWin < 5 && computerWin < 5) {
-        winner = playRound();
-        if (winner == "player") {
-            playerWin++;
-        } else if (winner == "comp") {
-            computerWin++;
-        }
+
+    winner = playRound(e);
+    if (winner == "player") {
+        playerWin += 1;
+        player.innerText = playerWin;
+
+    } else if (winner == "comp") {
+        computerWin++;
+        comp.innerText = computerWin;
     }
+    
     if (playerWin == 5) {
-        console.log("Congratulations, human versus machine, human won!")
-    } else {
-        console.log("Unfortunately, human versus machine, machine wins the day!")
+        banner.innerText = ("Congratulations, human versus machine, human won!")
+
+    } else if (computerWin == 5) {
+        banner.innerText = ("Unfortunately, human versus machine, machine wins the day!")
     }
+
+    if (playerWin == 5 || computerWin == 5) {
+        player.innerText = 0;
+        comp.innerText = 0;
+    }
+
 }
-console.log("Nice");
-function playRound() {
+function playRound(playerChoice) {
     goodChoice = false;
-    playerChoice = "";
     compChoice = computerPlay();
-    while (!goodChoice) {
-        choice = prompt("Please input rock, paper or scissors: ");
-        choice = choice.toLowerCase();
-        if (choice == "rock" || choice == "paper" || choice == "scissors") {
-            playerChoice = choice;
-            goodChoice = true;
-        } else {
-            alert("You need to pick rock, paper or scissors");
-        }
-    }
     if (playerChoice == "rock" && compChoice == "scissors" || playerChoice == "paper" && compChoice == "rock" || playerChoice == "scissors" && compChoice == "paper") {
-        console.log("Player won with this round with: " + playerChoice + " and Computer lost this round with: " + compChoice + "!")
+        banner.innerText = "Player won this round with: " + playerChoice + " and Computer lost this round with: " + compChoice + "!";
         return "player";
     } else if (playerChoice == "rock" && compChoice == "paper" || playerChoice == "paper" && compChoice == "scissors" || playerChoice == "scissors" && compChoice == "rock") {
-        console.log("Computer won with this round with: " + compChoice + " and Player lost this round with: " + playerChoice + "!")
+        banner.innerText = "Computer won this round with: " + compChoice + " and Player lost this round with: " + playerChoice + "!"
         return "comp";
     } else {
-        console.log("This was a tie round!")
+        banner.innerText = ("This was a tie round!");
         return "tie";
     }
 }

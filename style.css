@@ -1,0 +1,86 @@
+﻿body
+{
+    background-color: lightblue;
+}
+h1{
+    font-family:sans-serif;
+    text-align: center;
+    padding-bottom: 10vh;
+}
+button {
+    padding: 0;
+    width:200px;
+    height: 200px;
+    border-radius: 20px;
+}
+.won{
+    border-color: #11FF20;
+}
+.container {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+}
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+
+}
+#winBanner{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+    color: #00AF02;
+    text-decoration: underline;
+
+}
+.player, .computer{
+    border: 2px solid black;
+    padding: 5px;
+}
+li{
+    display: block;
+    width: 10vh;
+    height: 10vh;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    
+}
+.score{
+    display: flex;
+    justify-content: center;
+}
+button:hover {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+#attribution {
+    display: flex;
+    height: 40vh; 
+    justify-content: center;
+    align-items: end;
+    
+}
+#button-row{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10vh;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

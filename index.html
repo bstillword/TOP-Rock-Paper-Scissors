@@ -4,8 +4,46 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <h1>New and Improved RPS</h1>
+    <div id="button-row">
+        <button onclick="playGame('rock')" class="choice" style="background-color: white;">
+            <img src="img/rock.png" style="object-fit:scale-down; height: 150px;"/>
+            <div>Rock</div>
+        </button>
+        <button onclick="playGame('paper')" class="choice" style="background-color: white;">
+            <img src="img/paper.png" style="object-fit:scale-down; height: 150px;" />
+            <div>Paper</div>
+        </button>
+        <button onclick="playGame('scissors')" class="choice" style="background-color: white;">
+            <img src="img/scissors.png" style="object-fit:scale-down; height: 150px;" />
+            <div>Scissors</div>
+        </button>
+    </div>
+    <div class="scoreboard">
+        <span class="score">Score</span>
+        <br />
+        <ul>
+            <li class="player">
+                <div>Player</div>
+                <br />
+                <div id="playerScore">0</div>
+            </li>
+            <li class="computer">
+                <div>Computer</div>
+                <br />
+                <div id="compScore">0</div>
+            </li>
+        </ul>
+    </div>
+    <div id="winBanner">
+
+    </div>
+    <div id="attribution">
+        <a href="https://www.vecteezy.com/free-vector/rock">Rock Vectors by Vecteezy</a>
+    </div>
     <script src="index.js">
 
     </script>
