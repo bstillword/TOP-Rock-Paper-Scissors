@@ -18,6 +18,7 @@ function game() {
         console.log("Unfortunately, human versus machine, machine wins the day!")
     }
 }
+console.log("Nice");
 function playRound() {
     goodChoice = false;
     playerChoice = "";
