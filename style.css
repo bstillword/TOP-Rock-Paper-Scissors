@@ -48,11 +48,12 @@ ul {
 .player, .computer{
     border: 2px solid black;
     padding: 5px;
+    padding: 3vh;
 }
 li{
-    display: block;
-    width: 10vh;
-    height: 10vh;
+    display: inline-block;
+    width: 80px;
+    height: auto;
     text-align: center;
     align-items: center;
     justify-items: center;
